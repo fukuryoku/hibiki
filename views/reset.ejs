@@ -1,0 +1,41 @@
+<% include partials/header %>
+
+
+
+   <div class="d-flex justify-content-center align-items-center container my-5">
+      <h1 style="color:white;">Восстановление пароля</h1>
+<form action="/reset/<%= token %>" method="POST" id="" class="container needs-validation" novalidate style="color:white;">
+    
+    <div class="form-row align-items-center">
+        
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom01">Новый пароль</label>
+        <input type="password" name="password" class="form-control" id="validationCustom01" placeholder="Новый пароль" value="" required>
+        <div class="valid-feedback">
+          Отлично
+        </div>
+        <div class="invalid-feedback">
+            Новый пароль пожалуйста
+          </div>
+      </div>
+      
+    </div>
+    
+     <div class="form-row align-items-center">
+       <div class="col-md-4 mb-3">
+        <label for="validationCustom02">Подтверждение </label>
+        <input type="password" name="confirm" class="form-control" id="validationCustom02" placeholder="Подтверждение новоо пароля" value="" required>
+        <div class="valid-feedback">
+          Отлично!
+        </div>
+        <div class="invalid-feedback">
+            Пароли не совпадают
+          </div>
+      </div>
+    </div>
+    
+    <button id="" class="btn btn-success" type="submit">Обновить пароль</button>
+  </form>
+ </div>
+
+<% include partials/footerShort %>

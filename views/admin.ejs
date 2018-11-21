@@ -1,0 +1,30 @@
+<% include partials/header %>
+
+
+ <h3 style="color:white;" class="m-5 text-center">Страница Администратора</h3>
+   <div class="d-flex justify-content-center align-items-center container my-5">
+    
+      <div id="shop" class="d-flex flex-row justify-content-center flex-wrap mx-0 my-3">
+         <% products.forEach(function(product){%>
+         
+         <div class="card tea" style="width: 20rem; background-color: #333;">
+                    <a href=""><img class="card-img-top" src="/<%=product.image%>" alt="matcha">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title"><%=product.title%></h5>
+                        <p class="card-text"><%=product.info%></p>
+                        <p><b><%=product.price%></b></p>
+                        
+                        <form  style="display: inline" id="delete-form" action="/<%= product._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-xs btn-danger">Удалить</button>
+                        </form>
+                         <a href="/<%=product._id%>/edit" class="btn btn-info m-3">Изменить</a>
+                    </div>
+            </div>
+         
+         <% }); %> 
+      </div>
+  </div>
+                          <a href="/admin/new" class="btn btn-success btn-lg btn-block my-3">Добавить новый продукт</a>
+
+<% include partials/footer%>

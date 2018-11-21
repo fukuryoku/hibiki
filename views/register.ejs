@@ -1,0 +1,57 @@
+<% include partials/header %>
+
+
+
+   <div class="d-flex justify-content-center align-items-center container my-5">
+      <h3 style="color:white;">Станьте членом чайного клуба</h3>
+<form action="/register" method="POST" id="AdminForm" class="container needs-validation" novalidate style="color:white;">
+    
+    <div class="form-row align-items-center">
+        
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom01">Имя пользователя</label>
+        <input type="text" name="username" class="form-control" id="validationCustom01" placeholder="Имя" value="" required>
+        <div class="valid-feedback">
+          Отлично!
+        </div>
+        <div class="invalid-feedback">
+            Ваше имя пользователя
+          </div>
+      </div>
+      
+    </div>
+    
+     <div class="form-row align-items-center">
+       <div class="col-md-4 mb-3">
+        <label for="validationCustom02">Пароль</label>
+        <input type="text" name="password" class="form-control" id="validationCustom02" placeholder="Пароль" value="" required>
+        <div class="valid-feedback">
+         Отлично
+        </div>
+        <div class="invalid-feedback">
+            Ваш пароль пожалуйста
+          </div>
+      </div>
+    </div>
+    
+    
+     <div class="form-row align-items-center">
+       <div class="col-md-4 mb-3">
+        <label for="validationCustom02">email</label>
+        <input type="text" name="email" class="form-control" id="validationCustom02" placeholder="email" value="" required>
+        <div class="valid-feedback">
+          Отлично
+        </div>
+        <div class="invalid-feedback">
+            Ваш  email.
+          </div>
+      </div>
+    </div>
+    
+    
+    
+    <button id="" class="btn btn-success" type="submit">Регистрация</button>
+  </form>
+ </div>
+
+<% include partials/footerShort %>

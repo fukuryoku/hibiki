@@ -1,0 +1,237 @@
+<% include partials/header %>
+
+<!---------------------------------- Header parallax -------------------------------------------------->
+
+<div id="hibiki" class="jumbotron jumbotron-fluid paral paralsec">
+    
+    <div class="hero-content-area">
+            <h1 class="display-3 ">Hibiki tea store</h1>
+            <p class="lead">Органический чай из Японии</p>
+            <p class="lead">
+                <a class="ghost-button" href="#shop" role="button">Заказ</a>
+            </p>
+    </div>
+    
+</div>
+
+<div class="d-flex flex-column align-items-center justify-content-center my-3">
+   
+         <h1 id="headerH1">Только настоящий чай из Японии</h1>
+         <span> <img class ="float-center" src="HR.png"> </span>
+       
+</div>
+
+<!------------------------ Blog section----------------------- -->
+
+<div id="blog" class="d-flex flex-row justify-content-center flex-wrap my-3 blogContainer mx-0">
+
+    <div class="card teaDiv tea hidden2" style="width: 20rem;">
+        <a href=""><img class="card-img-top" src="production1.jpg" alt="matcha">            </a>
+            <div class="card-body">
+                <h5 class="card-title">Наш импорт</h5>
+                <p class="card-text">Мы свми отбираем и импортируем чай прямиком из завода в Японии, мы уверены в нашем чае </p>
+                <a href="#shop" class="ghost-button">Купить</a>
+            </div>
+    </div>
+    
+    <div class="card teaDiv tea hidden2" style="width: 20rem;">
+            <a href=""><img class="card-img-top" src="production2.jpg" alt="matcha">            </a>
+                <div class="card-body">
+                    <h5 class="card-title">Органический чай</h5>
+                    <p class="card-text">Строгие пищевые нормы в Японии гарантируют действительно чистый и качественный чай с сертификацией</p>
+                    <a href="#shop" class="ghost-button">Купить</a>
+                </div>
+        </div>
+
+        <div class="card teaDiv tea hidden2" style="width: 20rem;">
+                <a href=""><img class="card-img-top" src="production3.jpg" alt="matcha">            </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Традиции</h5>
+                        <p class="card-text">Многолетние традиции сборки и приготовления чая, исконно японские рецепты и смеси</p>
+                        <a href="#shop" class="ghost-button">Купить</a>
+                    </div>
+            </div>
+    
+</div>
+
+
+
+<!----------------- Master word paralax section----------------------------------->
+<div class="d-flex flex-column align-items-center justify-content-center my-3">
+   
+    <h1 id="headerH1">Слово Мастера</h1>
+    <span> <img class ="float-center" src="HR.png"> </span>
+  
+</div>
+    <div class= "d-flex flex-row  mx-0 my-3 ">
+            <div id="teaMaster" class="paral my-3">
+            </div>
+                <div id="teaMaster2" class="my-3">
+                    <h2 class="" ><i>茶の湯</i></h2>
+                    <p class="mx-2" ><i>"Если человек не выпил чая, он не способен воспринимать истину и красоту..."</i> </p>
+                </div>
+
+        </div>
+     </div>
+
+
+</div>
+
+
+
+
+<!---------------------------- Tea section------------------------->
+<div  class="d-flex flex-column align-items-center justify-content-center my-3 ">
+   
+    <h1 id="headerH1">Наша коллекция чая</h1>
+    <span> <img class ="float-center" src="HR.png"> </span>
+  
+</div>
+<div id="shop" class="d-flex flex-row justify-content-center flex-wrap mx-0 my-3">
+         <%       products.forEach(function(product){%>
+         
+         <div class="card tea hidden" style="width: 20rem; background-color: #333;">
+                    <a ><img class="card-img-top" src="<%=product.image%>" alt="matcha">
+                    </a>
+                    <div class="card-body">
+                        <h5 class=" t card-title"><%=product.title%></h5>
+                        <p class="card-text"><%=product.info%></p>
+                        <p class="price"><b><%=product.price%></b></p>
+                        <a  class="ghost-button order">Order now</a>
+
+                    </div>
+            </div>
+         
+         <% }); %> 
+
+            
+            
+            </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!------------------------------------- About matcha------------------------------ -->
+
+<div class="d-flex flex-column align-items-center justify-content-center my-3">
+   
+        <h1 id="headerH1">Мир о Японском чае Матча</h1>
+        <span> <img class ="float-center" src="HR.png"> </span>
+      
+</div>
+
+<div class="d-flex flex-row justify-content-center flex-wrap my-3 ">
+
+        <div class="card smi tea" style="width: 24rem;">
+                <div class="card-body">
+                    <span class="fas fa-quote-left fa-2x theme-col-two"></span>
+                   <p class="card-text">" На нью-йоркской Неделе моды модели бегали со стаканчиками полезного «редбулла». Так в шутку называют сорт  японского порошкового зеленого чая матча. Его теперь продают как кофе в барах по всему Манхэттену. В прошлом году в американском журнале клинического питания были опубликованы результаты исследования, которые показали, что соединение антиоксидантов в чае матча замедляет рост жировых клеток..."</p>
+                  <a href="https://www.vogue.ru/peopleparties/tabletalk/matcha_cha/" class="card-link"><img src="vog.png" alt=""></a>
+                  <a href="https://www.vogue.ru/peopleparties/tabletalk/matcha_cha/" id="smiPerson"  class="card-link theme-col-two ">VOGUE.RU </a>
+                </div>
+        </div>
+
+              <div class="card smi tea" style="width: 24rem;">
+                    <div class="card-body">
+                        <span class="fas fa-quote-left fa-2x theme-col-two"></span>
+                       <p class="card-text">"Когда к концу рабочего дня у тебя случается упадок сил, ты (как и большинство) тянешься за кружкой крепкого кофе и печенькой. Приятный, но абсолютно контрпродуктивный ход — он плох и для работоспособности, и для талии. Но залог твоей энергичности не в отказе от сладкого перекуса, а в том, чтобы довести его до ума. И зеленый чай, и горький шоколад полезны и прекрасно тонизируют, это ни для кого не тайна. Настоящий же секрет в том, чтобы их грамотно соединить..."</p>
+                      <a href="https://mhealth.ru/diet/videorecipes/eda-dlya-mozga-den-4-shokoladnye-tryufeli-s-zelenym-chaem/" class="card-link"><img src="MH.png" alt=""></a>
+                      <a href="https://mhealth.ru/diet/videorecipes/eda-dlya-mozga-den-4-shokoladnye-tryufeli-s-zelenym-chaem/" id="smiPerson"  class="card-link theme-col-two ">Men's Health</a>
+                    </div>
+                </div>
+
+                  <div class="card smi tea" style="width: 24rem;">
+                        <div class="card-body">
+                            <span class="fas fa-quote-left fa-2x theme-col-two"></span>
+                           <p class="card-text">" - Matcha comes primarily from the Kyoto region of Japan. People there have been sipping matcha tea for centuries. Now it's crossed the pacific and is taking the United States by storm. The green tea leaves are harvested and ground into a powder that's turning up in everything from vodka drinks to sweets. Bibble and Sip is always packed. Matcha isn't in everything but it crops up a lot. The matcha latte is a brisk seller but it's the matcha cream puff that's really the star of the show..."</p>
+                          <a href="http://www.fox5ny.com/news/green-tea-matcha-craze" class="card-link"><img src="fox.png" alt=""></a>
+                          <a href="http://www.fox5ny.com/news/green-tea-matcha-craze" id="smiPerson"  class="card-link theme-col-two ">FOX 5 NEWS</a>
+                        </div>
+                     </div>
+
+</div>
+
+
+<!------------------------------------- CART------------------------- -->
+
+
+
+<div id="cart" class="checkOut container text-center">
+                        <div class="row">
+                                
+                                <button type="button"  id="refreshBtn" class="ghost-button">Refresh </button>
+                                <button type="button"  id="CheckoutBtn" class="ghost-button">Checkout </button>
+                                <div name="total" class="col"></div>
+                                <%if(currentUser) {%>
+                                    <div name="discount" class="col"> Скидка для <%=currentUser.username%> <span id="discount">5</span> %</div>
+                                <% } %>
+                                
+                        </div>
+        
+            </div>  
+
+
+<!-- /////////Checkout//////////////////// -->
+
+<div class="d-flex justify-content-center align-items-center container my-5">
+    <form action="/order" method="POST" id="form" class="container needs-validation" novalidate>
+            
+        <div class="form-row align-items-center">
+          <div class="col-md-4 mb-3">
+            <label for="validationCustom01">Имя Фамилия</label>
+            <input type="text" name="name" class="form-control" id="validationCustom01" placeholder="Йошида Рюноскэ" value="" required>
+            <div class="valid-feedback ">
+              Отлично
+            </div>
+            <div class="invalid-feedback">
+                Пожалуйста  Ваше Имя
+              </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationCustom02">Телефон</label>
+            <input type="text" name="phone" class="form-control" id="validationCustom02" placeholder="+380738888888" value="" required>
+            <div class="valid-feedback">
+              Отлично
+            </div>
+            <div class="invalid-feedback">
+                Ваш телефон пожалуйста
+              </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationCustomUsername">Email</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+              </div>
+              <input type="email" name="email" class="form-control" id="validationCustomUsername" placeholder="Email" aria-describedby="inputGroupPrepend" value="" required>
+              <div class="invalid-feedback">
+                Ваш Email
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom03">Адресс доставки</label>
+            <input type="text" name="adress" class="form-control" id="validationCustom03" placeholder="Новая почта 31 Киев" required>
+            <input type="text" id="orderTable" name="orderTable" class="form-control" id="validationCustom03" value = "" style="display:none">
+            <div class="invalid-feedback">
+              Ваш адресс пожалуйста
+            </div>
+          </div>
+          
+        </div>
+        
+        <button id="submitOrder" class="" type="submit">Отправить</button>
+      </form>
+</div>
+
+
+    
+<% include partials/footer %>

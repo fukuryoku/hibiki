@@ -1,0 +1,71 @@
+<% include partials/header %>
+
+
+
+   <div class="d-flex justify-content-center align-items-center container my-5">
+     <h3 style="color:white;">Админ страница редактирования продукта</h3>
+<form action="/<%=product._id%>?_method=PUT" method="POST" id="AdminForm" class="container needs-validation" novalidate style="color:white;">
+    
+    <div class="form-row align-items-center">
+        
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom01">Имя продукта</label>
+        <input type="text" name="product[title]" class="form-control" id="validationCustom01" placeholder="Чай" value="<%=product.title%>" required>
+        <div class="valid-feedback">
+          Отлично
+        </div>
+        <div class="invalid-feedback">
+            Имя продукта
+          </div>
+      </div>
+      
+    </div>
+    
+     <div class="form-row align-items-center">
+       <div class="col-md-4 mb-3">
+        <label for="validationCustom02"> url Изображения</label>
+        <input type="text" name="product[image]" class="form-control" id="validationCustom02" placeholder="image url" value="<%=product.image%>" required>
+        <div class="valid-feedback">
+          Отлично
+        </div>
+        <div class="invalid-feedback">
+            Нужжна ссылка url.
+          </div>
+      </div>
+    </div>
+    
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom03">Описание для карточки</label>
+        <input type="text" name="product[info]" class="form-control" id="validationCustom03" placeholder="Info" value="<%=product.info%>"required>
+        <div class="invalid-feedback">
+          Нужно описание для карточки
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom03">Полное описание</label>
+        <input type="text" name="product[description]" class="form-control" id="validationCustom03" placeholder="description" value="<%=product.description%>"required>
+        <div class="invalid-feedback">
+         Нужно описание продукта для странинцы
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationCustom03">Цена</label>
+        <input type="text" name="product[price]" class="form-control" id="validationCustom03" placeholder="Price" value="<%=product.price%>"required>
+        <div class="invalid-feedback">
+         Нужна цена
+        </div>
+      </div>
+    </div>
+    
+    <button id="" class="btn btn-success" type="submit">Сохранить изменения</button>
+  </form>
+ </div>
+
+<% include partials/footer %>

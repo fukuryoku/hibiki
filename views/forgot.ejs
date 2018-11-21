@@ -1,0 +1,30 @@
+<% include partials/header %>
+
+
+
+   <div class="d-flex flex-column justify-content-center align-items-center container my-5">
+       <h3 style="color:white;">Забыли пароль? введите Ваш email</h3>
+<form action="/forgot" method="POST" id="ForgotForm" class="container needs-validation" novalidate style="color:white;">
+    
+    <div class="form-row align-items-center">
+        
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom01">email</label>
+        <input type="text" name="email" class="form-control" id="validationCustom01" placeholder="email" value="" required>
+        <div class="valid-feedback">
+          Отлично
+        </div>
+        <div class="invalid-feedback">
+            Ваш email
+          </div>
+      </div>
+      
+    </div>
+    
+    
+    
+    <button id="" class="btn btn-success" type="submit">Восстановить</button>
+  </form>
+ </div>
+
+<% include partials/footerShort %>
