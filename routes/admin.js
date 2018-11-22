@@ -27,7 +27,7 @@ router.get("/new", isAdmin, function(req, res){
 function isAdmin (req, res, next) {
  if(req.isAuthenticated())
  {           // is Admin?
-            if("5be9738a1ab34917ad18de4f"==(req.user._id)) {
+            if("5bf678cf324d8e00161819d4"==(req.user._id)) {
                 next();
             }
             else {
