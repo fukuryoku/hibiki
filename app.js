@@ -26,11 +26,11 @@ var express        = require("express"),
     productsRoutes      = require("./routes/products")
     
     
-// var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v10";
-// mongoose.connect(url);    
+var url = process.env.DATABASEURL || "mongodb://localhost/hibiki";
+mongoose.connect(url);    
 
 // process.env.databseURL;
-mongoose.connect("process.env.DATABASEURL");
+// mongoose.connect("process.env.DATABASEURL");
 // mongoose.connect("mongodb://hibikiadmin:hibiki313@ds159188.mlab.com:59188/hibiki");
 
 console.log(process.env.DATABASEURL);
