@@ -28,9 +28,13 @@ var express        = require("express"),
     
 // var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v10";
 // mongoose.connect(url);    
-// mongoose.connect("mongodb://Admin:owl313777@ds111623.mlab.com:11623/yelpcamp");
+
 // process.env.databseURL;
-mongoose.connect("mongodb://localhost/hibiki");
+// mongoose.connect("mongodb://localhost/hibiki");
+mongoose.connect("mongodb://hibikiadmin:hibiki313@ds159188.mlab.com:59188/hibiki");
+
+
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(helmet());
