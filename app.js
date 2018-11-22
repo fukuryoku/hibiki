@@ -101,10 +101,15 @@ app.post('/order', function (req, res) {
    smtpTransport.close(); 
     }); });
 
+app.get('/robots.txt', function (req, res) {
+    res.type('text/plain');
+    res.send("User-agent: *\nDisallow: /admin\n Disallow: /admin/new\nDisallow: /admin/edit\nDisallow: /reset\nDisallow: /forgot\nDisallow: /login\nDisallow: /logout\nDisallow: /register\n");
+});
 
 app.use("/admin",adminRoutes);
 app.use(authRoutes);
 app.use(productsRoutes);
+
 
 app.get("/*", function(req, res){
   res.send("404"); 
