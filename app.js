@@ -30,10 +30,10 @@ var express        = require("express"),
 // mongoose.connect(url);    
 
 // process.env.databseURL;
-// mongoose.connect("mongodb://localhost/hibiki");
-mongoose.connect("mongodb://hibikiadmin:hibiki313@ds159188.mlab.com:59188/hibiki");
+mongoose.connect("process.env.DATABASEURL");
+// mongoose.connect("mongodb://hibikiadmin:hibiki313@ds159188.mlab.com:59188/hibiki");
 
-
+console.log(process.env.DATABASEURL);
 
 
 app.use(bodyParser.urlencoded({extended: true}));
