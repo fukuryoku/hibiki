@@ -96,8 +96,8 @@
                     <div class="card-body">
                         <h5 class=" t card-title"><%=product.title%></h5>
                         <p class="card-text"><%=product.info%></p>
-                        <p class="price"><b><%=product.price%></b></p>
-                        <a  class="ghost-button order">Купить</a>
+                        <p class="price d-inline"><b><%=product.price%></b></p> <b class=""> грн за 50 грамм</b>
+                        <a  class="ghost-button order my-3">Купить</a>
 
                     </div>
             </div>
@@ -165,8 +165,8 @@
 <div id="cart" class="checkOut container text-center">
                         <div class="row">
                                 
-                                <button type="button"  id="refreshBtn" class="ghost-button">Refresh </button>
-                                <button type="button"  id="CheckoutBtn" class="ghost-button">Checkout </button>
+                                <button type="button"  id="refreshBtn" class="ghost-button">Обновить </button>
+                                <button type="button"  id="CheckoutBtn" class="ghost-button">Оформить </button>
                                 <div name="total" class="col"></div>
                                 <%if(currentUser) {%>
                                     <div name="discount" class="col"> Скидка для <%=currentUser.username%> <span id="discount">5</span> %</div>

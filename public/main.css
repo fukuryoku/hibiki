@@ -95,7 +95,7 @@ a{
     display: inline-block;
     width: 150px;
     padding: 8px;
-    color: #caa462;
+    color: #caa462!important;
     background-color: transparent;
     border: 2px solid #caa462;
     text-align: center;
@@ -116,7 +116,7 @@ a{
     text-decoration: none;
     background-color: #caa462;
     border-color: #333;
-    color: white;
+    color: white!important;
     -webkit-transition: color 0.3s ease-in,
                 background-color 0.3s ease-in,
                 border-color 0.3s ease-in;

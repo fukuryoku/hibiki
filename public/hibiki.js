@@ -164,6 +164,10 @@ var animateHTML = function() {
   })();
  
 
+let refreshBtn = document.getElementById('refreshBtn')
+refreshBtn.onclick=function(){
+  refreshCart()
+}
 
 
 let cartBtn = document.getElementById('cartBtn')
