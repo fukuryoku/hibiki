@@ -27,7 +27,13 @@ function addCart(btn)
     let price=this.parentNode.querySelector("p.price").innerText;
     let title=this.parentNode.querySelector("h5.t").innerText;
     newBuy.className = "row";
-    newBuy.innerHTML = `<div  name="title"   class="col" >${title} </div> <div name="price"class="col">${price}</div><div  class="col"> <input name="quantity" type="text"  value="1"> </div><div name="sum" class="col"></div>`;
+    newBuy.innerHTML = 
+    `<div  name="title"   class="col" >${title} </div>
+    <div name="price"class="col">${price}</div>
+    `;
+   // <div name="sum" class="col"></div>
+    // <div  class="col"> <input name="quantity" type="number" min="1" max="5" value="1" step="1" readonly = "readonly"> </div>
+
     cart.insertBefore(newBuy, cart.children[0]);
     
     let delBtn = document.createElement('button');
@@ -51,23 +57,25 @@ function addCart(btn)
   }
   
   function  refreshCart(){
-      var sums = document.querySelectorAll('div [name=sum]')
+      // var sums = document.querySelectorAll('div [name=sum]')
       var prices = document.querySelectorAll('div [name=price]')
-      var quants = document.querySelectorAll('input [name=quantity]')
+      // var quants = document.querySelectorAll('input [name=quantity]')
       // var total=document.querySelector('div [name=total]').innerText
-      for(var i=0; i<sums.length;i++){
-        sums[i].innerText=Number(document.querySelectorAll('input[name=quantity]')[i].value)*Number(document.querySelectorAll('div [name=price]')[i].innerText);
-      }
+      // for(var i=0; i<sums.length;i++){
+      //   sums[i].innerText=1*Number(document.querySelectorAll('div [name=price]')[i].innerText);
+        // Number(document.querySelectorAll('input[name=quantity]')[i].value)
+      
       var res=0
-      for(var i=0; i<sums.length;i++){
-        res+=Number(sums[i].innerText);
+      // for(var i=0; i<sums.length;i++){
+      //   res+=Number(sums[i].innerText);
+      // }
+      for(var i=0; i<prices.length;i++){
+        res+=Number(prices[i].innerText);
       }
       if(document.getElementById('discount')){res-= (res/100)*document.getElementById('discount').innerText} //span from ejs
 
       document.querySelector('div [name=total]').innerText="Сумма "+res+" UAH";
       addCartHtmlToOrderForm();
-
-    
   }
   
 // ++++++++++++END OF CART CONTROL+++++++++++++++++++++++++++++++++=

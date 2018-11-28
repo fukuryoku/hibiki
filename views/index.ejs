@@ -91,12 +91,11 @@
          <%       products.forEach(function(product){%>
          
          <div class="card tea hidden" style="width: 20rem; background-color: #333;">
-                    <a ><img class="card-img-top" src="<%=product.image%>" alt="matcha">
-                    </a>
+                    <a ><img class="card-img-top" src="<%=product.image%>" alt="<%=product.title%>"></a>
                     <div class="card-body">
                         <h5 class=" t card-title"><%=product.title%></h5>
                         <p class="card-text"><%=product.info%></p>
-                        <p class="price d-inline"><b><%=product.price%></b></p> <b class=""> грн за 50 грамм</b>
+                        <p class="price d-inline"><b><%=product.price%></b></p> <b class=""> грн. за 50 гр.</b>
                         <a  class="ghost-button order my-3">Купить</a>
 
                     </div>
