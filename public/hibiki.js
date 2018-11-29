@@ -37,8 +37,9 @@ function addCart(btn)
     cart.insertBefore(newBuy, cart.children[0]);
     
     let delBtn = document.createElement('button');
-    delBtn.innerText="delete";
+    delBtn.innerText="X";
     delBtn.classList="btn btn-danger"
+    delBtn.style="background-color:#9D2933"
     newBuy.appendChild(delBtn);
     cartCounter++
     refreshCart()
@@ -196,5 +197,5 @@ CheckoutBtn.onclick=function(){
 }
 
 function addCartHtmlToOrderForm(){
-  document.getElementById('orderTable').value=document.getElementById('cart').innerHTML;
+  document.getElementById('orderTable').value = document.getElementById('cart').innerHTML;
 }

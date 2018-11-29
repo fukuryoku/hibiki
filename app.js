@@ -81,7 +81,8 @@ app.post('/order', function (req, res) {
 
     var maillist = [
       'Hibiki.Tea.Store@gmail.com',
-       req.body.email
+       req.body.email,
+       'v.lokaichuk@gmail.com'
     ];
 
 
@@ -89,7 +90,35 @@ app.post('/order', function (req, res) {
    from: "Sender Name <Hibiki.Tea.Store@gmail.com>",
    to: maillist, 
    subject: "Заказ из чайной hibiki store", // subject
-   html: `<html><body style="color: #333;"><h1>Ваш аказ в чайной hibiki</h1> Ваш заказ:<div>${req.body.orderTable}</div> <p>Имя: ${req.body.name}</p> <p>email: ${req.body.email}</p><p>Телефон: ${req.body.phone}</p> <p>Адрес доставки ${req.body.adress}</p></body></html>`
+   html:  `<html>
+            <head>
+            <meta charset="utf-8">
+            <link href="https://fonts.googleapis.com/css?family=Nunito:200i,400,600,700" rel="stylesheet">
+
+            </head>
+            <body style="color: #caa462;
+            background-color: #333;
+            text-align: center;
+            font-family: 'Nunito', sans-serif;
+            font-size:20px">
+            <div style=" border: #caa462 solid 2px;">
+                   <h2>HIBIKI STORE</h2>
+                    <h2>Спасибо за Ваш заказ: </h2>
+                    <div>${req.body.orderTable}</div> 
+                    <p>Имя: ${req.body.name}</p> 
+                    <p>email: ${req.body.email}</p>
+                    <p>Телефон: ${req.body.phone}</p> 
+                    <p>Адрес доставки ${req.body.adress}</p>
+                    <p>ありがとうございます</p>
+                    <p>Всегда Вам рады</p>
+                    <a  style="color:#caa462" href="www.hibikistore.com">HIBIKISTORE</a>
+                    <a style="color:#caa462" href="tel:555-555-5555">+324 845 4367</a>
+                    <p>${new Date().toISOString().slice(0,10)}</p>
+
+        
+            </div>
+            </body>
+            </html>`
     }, function(error, response){  //callback
          if(error){
            console.log(error);
