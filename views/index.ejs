@@ -95,8 +95,8 @@
                     <div class="card-body">
                         <h5 class=" t card-title"><%=product.title%></h5>
                         <p class="card-text"><%=product.info%></p>
-                        <a class="myA fas fa-mortar-pestle text-left mb-2" data-toggle="collapse" href="#<%=product.title%>" role="button" aria-expanded="false" > Рецепт..</a>
-                        <p class="collapse" id="<%=product.title%>"><%=product.description%></p>
+                        <a class="myA fas fa-mortar-pestle text-left mb-2" data-toggle="collapse" href="#<%=(product.title).replace(/ /g,'')%>" role="button" aria-expanded="false" > Рецепт..</a>
+                        <p class="collapse" id="<%=(product.title).replace(/ /g,'')%>"><%=product.description%></p>
                         <p class="price d-inline"><b><%=product.price%></b></p> <b class=""> грн. за 50 грамм</b>
                         <a class="ghost-button order my-3">Купить</a>
 
