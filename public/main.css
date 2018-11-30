@@ -19,6 +19,7 @@ body{
     font-family: 'Nunito', sans-serif;
     position: relative;
     scroll-behavior: smooth;
+    min-height: 100vh;
 }
 a{
     cursor: pointer;
@@ -197,7 +198,7 @@ background-color:transparent;
 
 /* Header Parallax Element Style*/ 
 .paral {
-min-height: 500px;
+min-height: 600px;
 background-attachment: fixed;
 background-size: cover;
 
@@ -232,8 +233,8 @@ line-height: 4rem;
 
 .hero{
  opacity: 0;
- -webkit-animation: 0.7s fadein 1s forwards;
-         animation: 0.7s fadein 1s forwards;
+ -webkit-animation: 1s fadein 0.7s forwards;
+         animation: 1s fadein 0.7s forwards;
 }
 
 @-webkit-keyframes fadein {
@@ -251,7 +252,7 @@ line-height: 4rem;
 
 .hero-content-area {
 	opacity: 0;
-	margin-top: 100px;
+	margin-top: 200px;
 	-webkit-animation: 1s slidefade 1s forwards;
 	        animation: 1s slidefade 1s forwards;
 }
@@ -259,14 +260,14 @@ line-height: 4rem;
 @-webkit-keyframes slidefade {
 	100% {
 		opacity: 1;
-		margin: 0;
+		margin: 50px;
 	}
 }
 
 @keyframes slidefade {
 	100% {
 		opacity: 1;
-		margin: 0;
+		margin: 50px;
 	}
 }
 
@@ -336,6 +337,10 @@ background-position: 50% 50%;
    
              transform: scale(1.1);
      
+}
+
+.tea .myA{
+    display: block;
 }
 
 /* =================Master section======================================== */
@@ -416,6 +421,8 @@ background-position: 50% 50%;
 
 }
 
+
+
 .smi img{
     border-radius: 50%;
     max-width: 10rem;
@@ -433,6 +440,7 @@ color: whitesmoke;
 #footerContainer{
 	color: whitesmoke;
 	background: black;
+	margin: auto auto 0 auto;
 	
 }
 
@@ -444,15 +452,15 @@ color: whitesmoke;
     color: #caa462;
 }
 
-.finalA{
+.myA{
     text-decoration: none;
     color: #caa462;
     text-align: center;
 }
 
-.finalA:hover{
+.myA:hover{
     text-decoration: none;
-    color: #9D2933;
+    color: white;
 }
 
 @media only screen and (max-width: 765px) {
@@ -491,6 +499,21 @@ input[type="number"] {
     -webkit-appearance: none; 
     margin: 0; 
   }
+  
+/*AUTH FORMS*/
+
+.AuthForm{
+    text-align:center;
+    color: white;
+    margin-top: 30px;
+}
+
+.AuthForm div{
+        justify-content: center;
+
+}
+
+
 /* ///////////FOrm/////////////// */
 
 #form{

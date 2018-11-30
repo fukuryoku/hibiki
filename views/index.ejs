@@ -5,7 +5,7 @@
 <div id="hibiki" class="jumbotron jumbotron-fluid paral paralsec">
     
     <div class="hero-content-area">
-            <h1 class="display-3 ">Hibiki tea store</h1>
+            <h1 class="display-3 ">Hibiki store</h1>
             <p class="lead">Органический чай из Японии</p>
             <p class="lead">
                 <a class="ghost-button" href="#shop" role="button">Заказ</a>
@@ -88,19 +88,20 @@
   
 </div>
 <div id="shop" class="d-flex flex-row justify-content-center flex-wrap mx-0 my-3">
-         <%       products.forEach(function(product){%>
+         <%  products.forEach(function(product){%>
          
          <div class="card tea hidden" style="width: 20rem; background-color: #333;">
                     <a ><img class="card-img-top" src="<%=product.image%>" alt="<%=product.title%>"></a>
                     <div class="card-body">
                         <h5 class=" t card-title"><%=product.title%></h5>
                         <p class="card-text"><%=product.info%></p>
+                        <a class="myA fas fa-mortar-pestle text-left mb-2" data-toggle="collapse" href="#<%=product.title%>" role="button" aria-expanded="false" > Рецепт..</a>
+                        <p class="collapse" id="<%=product.title%>"><%=product.description%></p>
                         <p class="price d-inline"><b><%=product.price%></b></p> <b class=""> грн. за 50 грамм</b>
-                        <a  class="ghost-button order my-3">Купить</a>
+                        <a class="ghost-button order my-3">Купить</a>
 
                     </div>
             </div>
-         
          <% }); %> 
 
             

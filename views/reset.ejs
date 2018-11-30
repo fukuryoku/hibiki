@@ -3,9 +3,9 @@
 
 
    <div class="d-flex justify-content-center align-items-center container my-5">
-      <h1 style="color:white;">Восстановление пароля</h1>
-<form action="/reset/<%= token %>" method="POST" id="" class="container needs-validation" novalidate style="color:white;">
-    
+<form action="/reset/<%= token %>" method="POST" id="" class="container needs-validation AuthForm" novalidate style="color:white;">
+          <h4 style="color:white;">Восстановление пароля</h4>
+
     <div class="form-row align-items-center">
         
       <div class="col-md-4 mb-3">
@@ -38,4 +38,4 @@
   </form>
  </div>
 
-<% include partials/footerShort %>
+<% include partials/footer%>
