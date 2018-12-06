@@ -87,7 +87,7 @@ app.post('/order', function (req, res) {
 
 
    smtpTransport.sendMail({  //email options
-   from: "Sender Name <Hibiki.Tea.Store@gmail.com>",
+   from: "HIBIKI японская чайная <Hibiki.Tea.Store@gmail.com>",
    to: maillist, 
    subject: "Заказ из чайной hibiki store", // subject
    html:  `<html>
