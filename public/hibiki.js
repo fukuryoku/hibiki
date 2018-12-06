@@ -1,4 +1,10 @@
+//preload
 
+window.addEventListener('load', function() {
+if(document.querySelector('#mainNavbar')) document.querySelector('#mainNavbar').classList.replace('invisible', 'hero');
+if(document.querySelector('#titleMain'))document.querySelector('#titleMain').classList.replace('invisible', 'hero-content-area');
+
+})
 
 // Change nav backgr on scroll
 $(function () {

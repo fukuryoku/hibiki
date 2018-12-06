@@ -11,6 +11,7 @@
     
       gtag('config', 'UA-62571495-3');
     </script>
+    
 
 
 	<meta charset="utf-8">
@@ -50,12 +51,12 @@
 
 
 
-<body data-spy="scroll" data-target="#mainNavbar" data-offset="70" >
+<body data-spy="scroll" data-target="#mainNavbar" data-offset="70" class="">
     <a href="#" id="myBtn" title="Go to top" class="p-0 fas fa-chevron-circle-up fa-3x" >
 <!-------------------------------- Navs --------------------------------------------->
 
 
-<nav id="mainNavbar" class="navbar navbar-expand-md navbar-dark  fixed-top  hero">
+<nav id="mainNavbar" class="navbar navbar-expand-md navbar-dark  fixed-top  invisible">
 
     <a class="navbar-brand" href="/">
         <span class="mr-2 theme-col-two fa fa-torii-gate"></span>
@@ -71,22 +72,21 @@
 
   <div class="collapse navbar-collapse justify-content-around" id="navLinks">
             <ul class="navbar-nav justify-content-around">
-            
+                <li class="nav-item">
+                    <a href="/#blog" class="nav-link">О НАС</a>
+                </li>
                 <li class="nav-item">
                     <a href="/#shop" class="nav-link">ЧАЙ</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/#" class="nav-link">О ЧАЕ</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/#News" class="nav-link">О НАС</a>
+                    <a href="/#News" class="nav-link">О ЧАЕ</a>
                 </li>
                 <li class="nav-item">
                     <a id="contactBtn" href="/#footerContainer" class="nav-link">КОНТАКТЫ</a>
                 </li>
                 <%if(currentUser){%>
                      <li class="nav-item">
-                        <a id="contactBtn" href="" class="nav-link">Рады Вас видеть  <%=currentUser.username%></a>
+                        <a id="contactBtn" href="" class="nav-link">Рады Вам <%=currentUser.username%></a>
                     </li>
                     <li class="nav-item">
                         <a id="contactBtn" href="/logout" class="nav-link">Выйти</a>
