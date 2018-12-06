@@ -126,7 +126,7 @@ app.post('/order', function (req, res) {
            res.redirect("/");
         }else{
            console.log("Messages sent");
-            req.flash('success', 'Arigatou! Мы приняли Ваш заказ и скоро свяжемся с Вами '+req.body.email);
+            req.flash('success', 'Arigatou! Мы приняли Ваш заказ, наши Ниндзя уже бегут на почту '+req.body.email);
            
            res.redirect("/");
        }
