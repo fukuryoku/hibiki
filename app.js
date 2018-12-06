@@ -112,7 +112,7 @@ app.post('/order', function (req, res) {
                     <p>ありがとうございます</p>
                     <p>Всегда Вам рады</p>
                     <a  style="color:#caa462" href="www.hibikistore.com">HIBIKISTORE</a>
-                    <a style="color:#caa462" href="tel:555-555-5555">+324 845 4367</a>
+                    <a style="color:#caa462" href="tel:380992380425">+380 99 238 04 25</a>
                     <p>${new Date().toISOString().slice(0,10)}</p>
 
         
