@@ -6,6 +6,46 @@ if(document.querySelector('#titleMain'))document.querySelector('#titleMain').cla
 
 })
 
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
+
+$('body').scrollspy({ target: '#mainNavbar' });
+
+
+// smooth scroll
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "" && window.location.hash) {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 600, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+    
+    
+  });
+});
+
+
 // Change nav backgr on scroll
 $(function () {
     $(document).scroll(function () {
@@ -13,6 +53,9 @@ $(function () {
         $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
     });
 });
+
+
+
 
 // ++++++++++++CART CONTROL++++++++++++++++++++++++
 let cart = document.getElementById('cart');
@@ -102,19 +145,13 @@ function scrollFunction() {
     }
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-} 
-
-$('body').scrollspy({ target: '#mainNavbar' });
 
 
 // Animation on viewport
 
 var animateHTML = function() {
     var elems;
+    var elemsTwo;
     var windowHeight;
     function init() {
       elems = document.querySelectorAll('.hidden');
