@@ -1,21 +1,23 @@
-//preload
+//================================preload
 
 window.addEventListener('load', function() {
 if(document.querySelector('#mainNavbar')) document.querySelector('#mainNavbar').classList.replace('invisible', 'hero');
 if(document.querySelector('#titleMain'))document.querySelector('#titleMain').classList.replace('invisible', 'hero-content-area');
 
 })
+//==================================================
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-} 
+
+// // When the user clicks on the button, scroll to the top of the document
+// function topFunction() {
+//     document.body.scrollTop = 0; // For Safari
+//     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+// } 
 
 $('body').scrollspy({ target: '#mainNavbar' });
 
 
-// smooth scroll
+//======================================= smooth scroll
 
 $(document).ready(function(){
   // Add smooth scrolling to all links
@@ -45,6 +47,8 @@ $(document).ready(function(){
   });
 });
 
+//========================================================================
+
 
 // Change nav backgr on scroll
 $(function () {
@@ -69,7 +73,7 @@ for(var i=0;i<OrderBtnArr.length;i++){
     
 }
 
-//Adding prod to cart
+//===================Adding prod to cart
 function addCart(btn)
 {
     let newBuy = document.createElement('div');
